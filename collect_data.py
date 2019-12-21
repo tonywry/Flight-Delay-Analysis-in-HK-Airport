@@ -3,8 +3,6 @@
 
 # #### Collect Data - https://www.hongkongairport.com/flightinfo-rest/rest/flights/past?date=2019-11-12&\lang=en&cargo=false&arrival=true
 
-# In[8]:
-
 import os
 os.chdir("/home/ec2-user/COMP7503")
 
@@ -17,8 +15,6 @@ import json
 latest_dt = (datetime.today() - timedelta(days=1)).strftime("%Y-%m-%d")
 print("Run Date "+latest_dt)
 
-
-# In[4]:
 
 
 # Function to scrap data and clean to proper JSON format
@@ -35,8 +31,6 @@ def scrap_data(url):
     return data_text.replace("]}","")
 
 
-# In[5]:
-
 
 try:    
     data_str = scrap_data("https://www.hongkongairport.com/flightinfo-rest/rest/flights/past?date={}                            &%5Clang=en&cargo=false&arrival=true".format(latest_dt))
@@ -48,21 +42,9 @@ except:
     print("Error Occur!!")
 
 
-# In[9]:
+
 
 
 with open('data/raw_json/data_{}.json'.format(latest_dt), 'w') as f:
     json.dump(flights, f)
 print("data saved in COMP7503/data/raw_json")
-
-# In[ ]:
-
-
-
-
-
-# In[ ]:
-
-
-
-

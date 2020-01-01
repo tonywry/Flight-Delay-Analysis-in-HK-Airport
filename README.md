@@ -1,15 +1,15 @@
 # Flight-Delay-Analysis-in-HK-Airport
-This project demonstrated an E2E process of analyzing delay time of all arrival flight in HK airport. Process include 
-1. Automatic Data collection/cleansing in Python
+This project demonstrated an E2E process of analyzing delay time of all arrival flights in HK airport. Processes include 
+1. Automatic Data Collection/Cleansing in Python
 2. Data Storage in MongoDB
 3. Predictive Modelling on delay time by XGBoost
-4. REST API to support Predictive Modelling
-5. Data flow design and Dashboarding by Node-Red
+4. REST API to support Predictive Modelling keep running in AWS EC2 Server
+5. Data flow design and Dashboarding in JS by Node-Red
 
 ### Data Collection/Cleansing
 Data from the government open source platform is used in this project. The open dataset is an open Restful API  which can be found on data.gov.hk1 published by the Hong Kong Airport Authority - https://data.gov.hk/en-data/dataset/aahk-team1-flight-info
 
-Data collection and cleansing step will be triggerd every 8AM HKT to collect the latest flight data of the day prior the running date.
+Data collection and cleansing step will be triggered every 8AM HKT to collect the latest flight data of the day prior the running date.
 
 ![1](https://user-images.githubusercontent.com/29504448/71365869-3f66f900-25db-11ea-9bc4-fd4c390e5e41.png)
 
